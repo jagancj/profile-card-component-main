@@ -1,0 +1,105 @@
+/* Root Font-Family */
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-blue: hsl(229, 23%, 23%);
+    --dark-greyish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+ @font-face {
+     font-family: kumbh-sans;
+     src: url('./font/KumbhSans-Regular.ttf');
+ }
+ @font-face {
+    font-family: kumbh-sans-bold;
+    src: url('./font/KumbhSans-Bold.ttf');
+}
+ /********************/
+ /*** Top Level Style ***/
+ body{
+     font-family: kumbh-sans;
+     font-size: 18px;
+     margin: 0;
+ }
+ /*****************/
+ .main-content {
+    background:  url('../images/bg-pattern-top.svg'),
+                url('../images/bg-pattern-bottom.svg');
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-color: var(--dark-cyan);
+    background-position: top -250px left -110px, bottom -250px right -110px;
+    width: 100vw;
+    height: 100vh;
+ }
+ .attribution { font-size: 11px; text-align: center; }
+ .attribution a { color: hsl(228, 45%, 44%); }
+ .card {
+     width: 300px;
+     height: 350px;
+     background-color: white;
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5%;
+ }
+ .card-header {
+    background: url('../images/bg-pattern-card.svg');
+    height: 100px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+ }
+ .card-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 0px 5px white;
+    transform: translate(100%, 50%);
+ }
+ .card-content {
+    position: relative;
+    top: 15%;
+    text-align: center;
+    color: var(--dark-greyish-blue);
+ }
+ .card-footer {
+    border-top: 1px solid var(--dark-gray);
+    position: relative;
+    top: 27%;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    text-align: center;
+ }
+ .card-text-top{
+    font-family: kumbh-sans-bold;
+    color: var(--very-dark-blue);
+ }
+ .col{
+     display: inline-block;
+     flex: 33%;
+     text-align: center;
+ }
+ .top-text {
+     font-weight: bolder;
+     font-family: kumbh-sans-bold;
+ }
+ .bottom-text {
+    font-size: 10px;
+    color: var(--dark-greyish-blue);
+    line-height: 0.10;
+}
+/****** Mobile Only CSS ********/
+@media screen and (max-width: 375px) {
+    .main-content {
+        background:  url('../images/bg-pattern-top.svg'),
+                    url('../images/bg-pattern-bottom.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: var(--dark-cyan);
+        background-position: top -50% left -110px, bottom -50% right -110px;
+        width: 100vw;
+        height: 100vh;
+     }
+}
